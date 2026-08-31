@@ -34,18 +34,19 @@ export const metadata: Metadata = {
     template: "%s | Thara Car World",
   },
   description:
-    "Thara Car World (Thara Car Detailing) offers premium auto detailing in Doha, Qatar — ceramic coating, paint correction, interior deep cleaning, and more. Visit us at Al-Nayef Souq, Shop-32.",
+    "Thara Car World (Thara Car Detailing) offers premium auto detailing in Doha, Qatar — ceramic coating, paint correction, interior deep cleaning, and more. Visit us at Al Nayef Souq, Ain Khalid.",
   keywords: [
     "car detailing Doha",
     "ceramic coating Qatar",
-    "car wash Al-Nayef Souq",
+    "car wash Al Nayef Souq",
+    "vehicle detailing service Ain Khalid",
     "Thara Car World",
     "auto detailing Qatar",
   ],
   openGraph: {
     title: "Thara Car World | Premium Auto Detailing in Doha, Qatar",
     description:
-      "Premium auto detailing in Doha — ceramic coating, paint correction, and full interior/exterior detailing at Al-Nayef Souq, Shop-32.",
+      "Premium auto detailing in Doha — ceramic coating, paint correction, and full interior/exterior detailing at Al Nayef Souq, Ain Khalid.",
     url: "https://www.cardetailing.qa",
     siteName: businessInfo.name,
     locale: "en_US",

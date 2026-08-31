@@ -35,10 +35,10 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
           <RevealOnScroll>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10">
-              {/* PLACEHOLDER — embed real Google Maps iframe pinned at Al-Nayef Souq, Shop-32 */}
+              {/* PLACEHOLDER — embed real Google Maps iframe pinned at Al Nayef Souq, Ain Khalid */}
               <Image
                 src="/placeholder-map.svg"
-                alt="Placeholder map: Al-Nayef Souq, Shop-32, Doha, Qatar"
+                alt="Placeholder map: Al Nayef Souq, Ain Khalid, Doha, Qatar"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 600px"

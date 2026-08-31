@@ -8,6 +8,7 @@ import ServiceCard from "@/components/ServiceCard";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import Promotions from "@/components/Promotions";
 import GlowButton from "@/components/GlowButton";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import RevealOnScroll from "@/components/RevealOnScroll";
@@ -92,8 +93,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Before / After */}
+      {/* Promotions */}
       <section className="bg-panel py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <RevealOnScroll className="mx-auto mb-14 max-w-2xl text-center">
+            <span className="font-body text-xs uppercase tracking-widest2 text-ceramic">
+              {t.promotions.eyebrow}
+            </span>
+            <h2 className="mt-3 font-display text-4xl uppercase tracking-wide md:text-5xl">
+              <ChromeText>{t.promotions.heading}</ChromeText>
+            </h2>
+            <p className="mt-4 font-body text-chrome-dark">{t.promotions.sub}</p>
+          </RevealOnScroll>
+
+          <Promotions />
+        </div>
+      </section>
+
+      {/* Before / After */}
+      <section className="border-t border-white/10 bg-carbon py-24">
         <div className="mx-auto max-w-4xl px-6">
           <RevealOnScroll className="mx-auto mb-14 max-w-2xl text-center">
             <span className="font-body text-xs uppercase tracking-widest2 text-ceramic">

@@ -7,8 +7,9 @@ export const businessInfo = {
   phone: "+974 7009 6565",
   phoneHref: "+97470096565",
   whatsappHref: "https://wa.me/97470096565",
-  email: "info@cardetailing.qa",
-  address: "Al-Nayef Souq, Shop-32, Doha, Qatar",
+  email: "saigokulsethumadhavan@gmail.com",
+  address: "Al Nayef Souq, Ain Khalid, Doha, Qatar",
+  category: "Vehicle detailing service",
 };
 
 export const services = [
@@ -211,6 +212,11 @@ type LocaleDictionary = {
     before: string;
     after: string;
   };
+  promotions: {
+    eyebrow: string;
+    heading: string;
+    sub: string;
+  };
   ctaBanner: {
     heading: string;
     sub: string;
@@ -332,9 +338,14 @@ export const dictionary: Record<Locale, LocaleDictionary> = {
       before: "Before",
       after: "After",
     },
+    promotions: {
+      eyebrow: "Limited Time",
+      heading: "Current Promotions",
+      sub: "Our latest offers on ceramic coating, tinting, and interior protection.",
+    },
     ctaBanner: {
       heading: "Ready for a car that turns heads?",
-      sub: "Visit us at Al-Nayef Souq, or send a WhatsApp message to book in minutes.",
+      sub: "Visit us at Al Nayef Souq, Ain Khalid, or send a WhatsApp message to book in minutes.",
       cta: "Chat on WhatsApp",
       visit: "Visit Us",
     },
@@ -391,14 +402,14 @@ export const dictionary: Record<Locale, LocaleDictionary> = {
     contactPage: {
       eyebrow: "Get In Touch",
       heading: "Contact Us",
-      sub: "Visit our shop, call, or message us — we're in the heart of Al-Nayef Souq.",
+      sub: "Visit our shop, call, or message us — we're in Al Nayef Souq, Ain Khalid.",
       addressLabel: "Address",
       phoneLabel: "Phone",
       emailLabel: "Email",
       hoursLabel: "Working Hours",
       hoursValue: "[PLACEHOLDER — confirm with client]",
       socialLabel: "Follow Us",
-      mapNote: "Map placeholder — embed the real Google Maps location for Al-Nayef Souq, Shop-32.",
+      mapNote: "Map placeholder — embed the real Google Maps location for Al Nayef Souq, Ain Khalid.",
     },
     common: {
       whatsapp: "WhatsApp",
@@ -455,9 +466,14 @@ export const dictionary: Record<Locale, LocaleDictionary> = {
       before: "قبل",
       after: "بعد",
     },
+    promotions: {
+      eyebrow: "عرض محدود",
+      heading: "العروض الحالية",
+      sub: "أحدث عروضنا على الطلاء السيراميكي والتظليل وحماية المقصورة الداخلية.",
+    },
     ctaBanner: {
       heading: "جاهز لسيارة تلفت الأنظار؟",
-      sub: "زرنا في سوق النايف، أو أرسل رسالة واتساب للحجز خلال دقائق.",
+      sub: "زرنا في سوق النايف، عين خالد، أو أرسل رسالة واتساب للحجز خلال دقائق.",
       cta: "تواصل عبر واتساب",
       visit: "زورونا",
     },
@@ -514,14 +530,14 @@ export const dictionary: Record<Locale, LocaleDictionary> = {
     contactPage: {
       eyebrow: "تواصل معنا",
       heading: "اتصل بنا",
-      sub: "زوروا محلنا، اتصلوا، أو راسلونا — نحن في قلب سوق النايف.",
+      sub: "زوروا محلنا، اتصلوا، أو راسلونا — نحن في سوق النايف، عين خالد.",
       addressLabel: "العنوان",
       phoneLabel: "الهاتف",
       emailLabel: "البريد الإلكتروني",
       hoursLabel: "ساعات العمل",
       hoursValue: "[PLACEHOLDER — confirm with client]",
       socialLabel: "تابعنا",
-      mapNote: "خريطة مؤقتة — يجب دمج موقع خرائط جوجل الفعلي لسوق النايف، محل 32.",
+      mapNote: "خريطة مؤقتة — يجب دمج موقع خرائط جوجل الفعلي لسوق النايف، عين خالد.",
     },
     common: {
       whatsapp: "واتساب",
