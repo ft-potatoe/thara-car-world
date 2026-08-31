@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thara Car World — Website Redesign (Pitch Mock)
+
+A multi-page marketing site for **Thara Car World / Thara Car Detailing** (CR: 217366), a premium
+auto detailing business at Al-Nayef Souq, Shop-32, Doha, Qatar. Built as a pitch mock to demonstrate
+a "dark automotive luxury" visual identity — dark carbon/charcoal base, chrome-gradient headlines,
+ceramic-blue glow accents, and motion-rich interactions.
+
+## Stack
+
+- Next.js 14 (App Router) + TypeScript
+- Tailwind CSS
+- Framer Motion (scroll reveals, hover tilt, page transitions, light-sweep)
+- Deployable to Vercel as a static/mostly-static build
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/` — Home (hero, stats, featured services, process timeline, why-choose-us, before/after slider, CTA)
+- `/services` — Full service grid + Ceramic Coating flagship hero + package tiers
+- `/gallery` — Filterable masonry gallery with lightbox
+- `/book` — Booking form + WhatsApp quick-book
+- `/contact` — Contact details, map placeholder, socials
 
-## Learn More
+## Bilingual (EN/AR)
 
-To learn more about Next.js, take a look at the following resources:
+Language toggle in the nav/footer switches all copy and flips to RTL layout (`lib/i18n/`).
+Locale preference persists in `localStorage`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Placeholder content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This is a **design pitch**, not production content:
 
-## Deploy on Vercel
+- All photography is a generated SVG placeholder (`/public/placeholder-*.svg`) with a code comment
+  at each usage site noting what real asset should replace it.
+- Pricing, working hours, and social links are explicitly marked `[PLACEHOLDER — confirm with client]`
+  or similarly flagged in the UI — do not treat them as real business data.
+- The booking form does not submit to a backend yet; it shows a mock confirmation state.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Real business facts already wired in: name, CR number, address, phone, email, the 8 services, the
+4-step process, and value props — see `lib/i18n/dictionary.ts`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploying
+
+Push to a Git provider and import into [Vercel](https://vercel.com/new). No environment variables
+are required for this mock.

@@ -1,101 +1,151 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
+import { MapPin } from "lucide-react";
+import Hero from "@/components/Hero";
+import StatsCounter from "@/components/StatsCounter";
+import ServiceCard from "@/components/ServiceCard";
+import ProcessTimeline from "@/components/ProcessTimeline";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import GlowButton from "@/components/GlowButton";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import RevealOnScroll from "@/components/RevealOnScroll";
+import ChromeText from "@/components/ChromeText";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { services, processSteps, whyChooseUs, businessInfo } from "@/lib/i18n/dictionary";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const { t, locale } = useLanguage();
+  const featured = services.slice(0, 4);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <>
+      <Hero />
+
+      {/* Stats strip */}
+      <section className="border-y border-white/10 bg-panel py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <StatsCounter items={t.stats.items} />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Featured services */}
+      <section className="bg-carbon py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <RevealOnScroll className="mx-auto mb-14 max-w-2xl text-center">
+            <span className="font-body text-xs uppercase tracking-widest2 text-ceramic">
+              {t.featuredServices.eyebrow}
+            </span>
+            <h2 className="mt-3 font-display text-4xl uppercase tracking-wide md:text-5xl">
+              <ChromeText>{t.featuredServices.heading}</ChromeText>
+            </h2>
+            <p className="mt-4 font-body text-chrome-dark">{t.featuredServices.sub}</p>
+          </RevealOnScroll>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {featured.map((service, i) => (
+              <RevealOnScroll key={service.slug} delay={i * 0.1}>
+                <ServiceCard service={service} locale={locale} />
+              </RevealOnScroll>
+            ))}
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <GlowButton href="/services" variant="outline">
+              {t.featuredServices.viewAll}
+            </GlowButton>
+          </div>
+        </div>
+      </section>
+
+      {/* Process timeline */}
+      <section className="bg-panel py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <RevealOnScroll className="mx-auto mb-16 max-w-2xl text-center">
+            <span className="font-body text-xs uppercase tracking-widest2 text-ceramic">
+              {t.process.eyebrow}
+            </span>
+            <h2 className="mt-3 font-display text-4xl uppercase tracking-wide md:text-5xl">
+              <ChromeText>{t.process.heading}</ChromeText>
+            </h2>
+            <p className="mt-4 font-body text-chrome-dark">{t.process.sub}</p>
+          </RevealOnScroll>
+
+          <ProcessTimeline steps={processSteps} locale={locale} />
+        </div>
+      </section>
+
+      {/* Why choose us */}
+      <section className="bg-carbon py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <RevealOnScroll className="mx-auto mb-14 max-w-2xl text-center">
+            <span className="font-body text-xs uppercase tracking-widest2 text-ceramic">
+              {t.why.eyebrow}
+            </span>
+            <h2 className="mt-3 font-display text-4xl uppercase tracking-wide md:text-5xl">
+              <ChromeText>{t.why.heading}</ChromeText>
+            </h2>
+          </RevealOnScroll>
+
+          <WhyChooseUs items={whyChooseUs} locale={locale} />
+        </div>
+      </section>
+
+      {/* Before / After */}
+      <section className="bg-panel py-24">
+        <div className="mx-auto max-w-4xl px-6">
+          <RevealOnScroll className="mx-auto mb-14 max-w-2xl text-center">
+            <span className="font-body text-xs uppercase tracking-widest2 text-ceramic">
+              {t.beforeAfter.eyebrow}
+            </span>
+            <h2 className="mt-3 font-display text-4xl uppercase tracking-wide md:text-5xl">
+              <ChromeText>{t.beforeAfter.heading}</ChromeText>
+            </h2>
+            <p className="mt-4 font-body text-chrome-dark">{t.beforeAfter.sub}</p>
+          </RevealOnScroll>
+
+          <RevealOnScroll delay={0.15}>
+            <BeforeAfterSlider
+              beforeSrc="/placeholder-before-01.svg"
+              afterSrc="/placeholder-after-01.svg"
+              beforeAlt="Placeholder: vehicle paint before correction, showing swirl marks"
+              afterAlt="Placeholder: vehicle paint after correction and ceramic coating"
+              beforeLabel={t.beforeAfter.before}
+              afterLabel={t.beforeAfter.after}
+            />
+          </RevealOnScroll>
+        </div>
+      </section>
+
+      {/* CTA banner */}
+      <section className="relative overflow-hidden bg-carbon py-24">
+        <div className="absolute inset-0 bg-ceramic-glow opacity-60" aria-hidden />
+        <div className="relative mx-auto max-w-4xl px-6 text-center">
+          <RevealOnScroll>
+            <h2 className="font-display text-4xl uppercase tracking-wide md:text-5xl">
+              <ChromeText>{t.ctaBanner.heading}</ChromeText>
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl font-body text-chrome-dark">{t.ctaBanner.sub}</p>
+
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <WhatsAppButton
+                label={t.ctaBanner.cta}
+                message="Hi Thara Car World, I'd like to book a detailing appointment."
+              />
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-chrome/40 px-6 py-3 font-body text-sm font-semibold uppercase tracking-wide text-chrome-light transition-colors hover:border-ceramic hover:text-ceramic"
+              >
+                <MapPin className="h-4 w-4" />
+                {t.ctaBanner.visit}
+              </Link>
+            </div>
+
+            <p className="mt-6 font-body text-sm text-chrome-dark">{businessInfo.address}</p>
+          </RevealOnScroll>
+        </div>
+      </section>
+    </>
   );
 }

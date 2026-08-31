@@ -3,21 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0c;
+  --foreground: #f2f3f5;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scrollbar-color: #2fd2ff #17171a;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-arabic), var(--font-body), sans-serif;
+}
+
+html[dir="rtl"] .font-display {
+  font-family: var(--font-arabic), sans-serif;
+  letter-spacing: 0;
+}
+
+::selection {
+  background: rgba(47, 210, 255, 0.3);
+  color: #f2f3f5;
 }
 
 @layer utilities {
