@@ -1,7 +1,7 @@
 # Thara Car World — Website Redesign (Pitch Mock)
 
 A multi-page marketing site for **Thara Car World / Thara Car Detailing** (CR: 217366), a premium
-vehicle detailing service at Al Nayef Souq, Ain Khalid, Doha, Qatar. Built as a pitch mock to demonstrate
+vehicle detailing service in Souq Al Nayef, Ain Khalid, Doha, Qatar. Built as a pitch mock to demonstrate
 a "dark automotive luxury" visual identity — dark carbon/charcoal base, chrome-gradient headlines,
 ceramic-blue glow accents, and motion-rich interactions.
 
@@ -23,7 +23,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Pages
 
-- `/` — Home (hero, stats, featured services, process timeline, why-choose-us, before/after slider, CTA)
+- `/` — Home (hero, stats, featured services, process timeline, why-choose-us, Google reviews, before/after slider, CTA)
 - `/services` — Full service grid + Ceramic Coating flagship hero + package tiers
 - `/gallery` — Filterable masonry gallery with lightbox
 - `/book` — Booking form + WhatsApp quick-book
@@ -50,6 +50,15 @@ This is a **design pitch**, not production content:
 
 Real business facts already wired in: name, CR number, category (Vehicle detailing service), address,
 phone, email, the 8 services, the 4-step process, and value props — see `lib/i18n/dictionary.ts`.
+
+## Google reviews section
+
+The homepage `Google Reviews` section (`components/GoogleReviews.tsx`) shows the business's real
+4.9-star / 175-review Google rating and six real customer reviews pulled from the Thara Car World
+Google Business Profile, hardcoded in `googleReviews` in `lib/i18n/dictionary.ts`. It's deliberately
+styled as a light card on the otherwise dark site so it reads distinctly, like an embedded review
+widget. Refresh the review text periodically from the live listing since it's a static snapshot,
+not a live feed.
 
 ## Deploying
 

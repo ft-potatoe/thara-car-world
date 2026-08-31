@@ -7,6 +7,7 @@ import StatsCounter from "@/components/StatsCounter";
 import ServiceCard from "@/components/ServiceCard";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import GoogleReviews from "@/components/GoogleReviews";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import GlowButton from "@/components/GlowButton";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -92,8 +93,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Before / After */}
+      {/* Google Reviews */}
       <section className="bg-panel py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <RevealOnScroll className="mx-auto mb-14 max-w-2xl text-center">
+            <span className="font-body text-xs uppercase tracking-widest2 text-ceramic">
+              {t.reviewsSection.eyebrow}
+            </span>
+            <h2 className="mt-3 font-display text-4xl uppercase tracking-wide md:text-5xl">
+              <ChromeText>{t.reviewsSection.heading}</ChromeText>
+            </h2>
+            <p className="mt-4 font-body text-chrome-dark">{t.reviewsSection.sub}</p>
+          </RevealOnScroll>
+
+          <GoogleReviews ratingLabel={t.reviewsSection.ratingLabel} viewAll={t.reviewsSection.viewAll} />
+        </div>
+      </section>
+
+      {/* Before / After */}
+      <section className="border-t border-white/10 bg-carbon py-24">
         <div className="mx-auto max-w-4xl px-6">
           <RevealOnScroll className="mx-auto mb-14 max-w-2xl text-center">
             <span className="font-body text-xs uppercase tracking-widest2 text-ceramic">

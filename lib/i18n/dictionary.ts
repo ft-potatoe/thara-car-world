@@ -8,9 +8,57 @@ export const businessInfo = {
   phoneHref: "+97470096565",
   whatsappHref: "https://wa.me/97470096565",
   email: "saigokulsethumadhavan@gmail.com",
-  address: "Al Nayef Souq, Ain Khalid, Doha, Qatar",
+  address: "Building No, Shop 32 & 33, Souq Al Nayef, 43 Street, 100 East Industrial Road Street, Ain Khalid, Doha, Qatar",
   category: "Vehicle detailing service",
+  googleRating: 4.9,
+  googleReviewCount: 175,
+  googleReviewsUrl: "https://www.google.com/maps/place/Thara+Car+World/data=!4m2!3m1!1s0x0:0xb337b348f1395d6b",
 };
+
+export const googleReviews = [
+  {
+    author: "Mohammed Irfan",
+    meta: "Local Guide · 145 reviews",
+    rating: 5,
+    timeAgo: "3 months ago",
+    text: "Very professionals in car detailing and care. Highly recommended. Mr. Roshan, very friendly crew and his Manager Mr. Vinoth...",
+  },
+  {
+    author: "chuck fabellar",
+    meta: "5 reviews",
+    rating: 5,
+    timeAgo: "3 months ago",
+    text: "Thara car shop is definitely one of the great shop. Their work is very professional and they give a good price so you feel worry free. Good and friendly staff, specially Roshan.",
+  },
+  {
+    author: "Poy",
+    meta: "6 reviews",
+    rating: 5,
+    timeAgo: "a month ago",
+    text: "I would like to express my sincere appreciation to Thara Car World. Choosing them for my graphene coating was definitely the right decision. The staff were professional, friendly, and accommodating.",
+  },
+  {
+    author: "Krishnakumar Pai",
+    meta: "3 reviews",
+    rating: 5,
+    timeAgo: "2 months ago",
+    text: "Awesome service, Technicians are good, with very good attitude. Recommended for car detailing within the budget.",
+  },
+  {
+    author: "S Al",
+    meta: "Local Guide · 13 reviews",
+    rating: 5,
+    timeAgo: "3 months ago",
+    text: "We went there for car tinting, and Roshan was very accommodating and professional. He explained everything clearly, gave us different options, and made the whole process easy. Highly recommended!",
+  },
+  {
+    author: "Mechelle Ann Bernadetteh Garcia-Ajedo",
+    meta: "2 reviews",
+    rating: 5,
+    timeAgo: "4 months ago",
+    text: "Excellent experience with this car tinting company. From the moment I arrived, the staff were very accommodating and easy to work with. They answered my questions and guided me on the best tint options.",
+  },
+];
 
 export const services = [
   {
@@ -205,6 +253,13 @@ type LocaleDictionary = {
     eyebrow: string;
     heading: string;
   };
+  reviewsSection: {
+    eyebrow: string;
+    heading: string;
+    sub: string;
+    ratingLabel: string;
+    viewAll: string;
+  };
   beforeAfter: {
     eyebrow: string;
     heading: string;
@@ -325,6 +380,13 @@ export const dictionary: Record<Locale, LocaleDictionary> = {
     why: {
       eyebrow: "Why Thara",
       heading: "Why Choose Us",
+    },
+    reviewsSection: {
+      eyebrow: "Google Reviews",
+      heading: "What Our Customers Say",
+      sub: "Real reviews from real customers on Google.",
+      ratingLabel: "Google rating",
+      viewAll: "Read all reviews on Google",
     },
     beforeAfter: {
       eyebrow: "Correction Work",
@@ -448,6 +510,13 @@ export const dictionary: Record<Locale, LocaleDictionary> = {
     why: {
       eyebrow: "لماذا ثارا",
       heading: "لماذا تختارنا",
+    },
+    reviewsSection: {
+      eyebrow: "تقييمات جوجل",
+      heading: "ماذا يقول عملاؤنا",
+      sub: "آراء حقيقية من عملاء حقيقيين على جوجل.",
+      ratingLabel: "تقييم جوجل",
+      viewAll: "اقرأ جميع التقييمات على جوجل",
     },
     beforeAfter: {
       eyebrow: "أعمال التصحيح",
