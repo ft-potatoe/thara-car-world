@@ -12,10 +12,9 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-carbon">
-      {/* PLACEHOLDER — replace with real hero video/image: car mid-detail, water beading on ceramic coat */}
       <Image
-        src="/placeholder-hero-detailing.svg"
-        alt="Placeholder: car mid-detail with water beading on ceramic-coated paint"
+        src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=2400&auto=format&fit=crop"
+        alt="Car mid-detail being rinsed, water beading on the paint"
         fill
         priority
         className="object-cover opacity-40"

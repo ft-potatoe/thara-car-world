@@ -39,10 +39,9 @@ export default function ServicesPage() {
           <RevealOnScroll>
             <div className="grid grid-cols-1 items-center gap-10 overflow-hidden rounded-3xl border border-ceramic/25 bg-carbon shadow-glow-ceramic-sm md:grid-cols-2">
               <div className="relative aspect-[4/3] md:aspect-auto md:h-full">
-                {/* PLACEHOLDER — replace with real ceramic coating application photo */}
                 <Image
-                  src="/placeholder-ceramic-hero.svg"
-                  alt="Placeholder: ceramic coating being applied to a vehicle panel"
+                  src="https://images.unsplash.com/photo-1708805282676-0c15476eb8a2?q=80&w=1600&auto=format&fit=crop"
+                  alt="Ceramic coating being applied to a vehicle panel"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 600px"

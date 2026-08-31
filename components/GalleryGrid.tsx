@@ -15,18 +15,23 @@ type GalleryItem = {
   category: Category;
 };
 
-const items: GalleryItem[] = Array.from({ length: 12 }, (_, i) => {
-  const n = i + 1;
-  const categories: Category[] = ["exterior", "interior", "ceramic"];
-  const category = categories[n % 3];
-  return {
-    id: `gallery-${n}`,
-    // PLACEHOLDER — replace with real gallery photo for this slot
-    src: `/placeholder-gallery-${String(n).padStart(2, "0")}.svg`,
-    alt: `Placeholder: ${category} detailing work sample ${n}`,
-    category,
-  };
-});
+const unsplash = (id: string) =>
+  `https://images.unsplash.com/photo-${id}?q=80&w=1200&auto=format&fit=crop`;
+
+const items: GalleryItem[] = [
+  { id: "gallery-01", src: unsplash("1520340356584-f9917d1eea6f"), alt: "Sports car exterior rinse, water beading on dark paint", category: "exterior" },
+  { id: "gallery-02", src: unsplash("1607860108855-64acf2078ed9"), alt: "Detailer hand-washing a black car exterior", category: "exterior" },
+  { id: "gallery-03", src: unsplash("1620584899131-a5ff5f8fbb03"), alt: "SUV exterior covered in wash foam", category: "exterior" },
+  { id: "gallery-04", src: unsplash("1605164598708-25701594473e"), alt: "Sedan exterior foam wash under wash-bay lighting", category: "exterior" },
+  { id: "gallery-05", src: unsplash("1605437241278-c1806d14a4d9"), alt: "Luxury sedan black leather interior and dashboard", category: "interior" },
+  { id: "gallery-06", src: unsplash("1629019878500-302b516de84c"), alt: "Open car door showing detailed tan leather interior", category: "interior" },
+  { id: "gallery-07", src: unsplash("1583573278124-e8d4fd3edf3c"), alt: "Car interior dashboard and steering wheel detail", category: "interior" },
+  { id: "gallery-08", src: unsplash("1549064233-945d7063292f"), alt: "Sports car red leather interior detailing", category: "interior" },
+  { id: "gallery-09", src: unsplash("1714434087918-4b9abedef3c6"), alt: "Close-up of glossy ceramic-coated black car hood", category: "ceramic" },
+  { id: "gallery-10", src: unsplash("1708805282676-0c15476eb8a2"), alt: "Detailer applying ceramic coating to a car panel", category: "ceramic" },
+  { id: "gallery-11", src: unsplash("1711513503808-53380d724182"), alt: "Red coupe with deep ceramic-coated gloss finish", category: "ceramic" },
+  { id: "gallery-12", src: unsplash("1750800668889-aa4c851bd7a8"), alt: "Detailer buffing ceramic coating on a car headlight area", category: "ceramic" },
+];
 
 export default function GalleryGrid({
   filters,

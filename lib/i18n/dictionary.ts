@@ -212,11 +212,6 @@ type LocaleDictionary = {
     before: string;
     after: string;
   };
-  promotions: {
-    eyebrow: string;
-    heading: string;
-    sub: string;
-  };
   ctaBanner: {
     heading: string;
     sub: string;
@@ -337,11 +332,6 @@ export const dictionary: Record<Locale, LocaleDictionary> = {
       sub: "Drag to reveal the difference precision detailing makes.",
       before: "Before",
       after: "After",
-    },
-    promotions: {
-      eyebrow: "Limited Time",
-      heading: "Current Promotions",
-      sub: "Our latest offers on ceramic coating, tinting, and interior protection.",
     },
     ctaBanner: {
       heading: "Ready for a car that turns heads?",
@@ -465,11 +455,6 @@ export const dictionary: Record<Locale, LocaleDictionary> = {
       sub: "اسحب لرؤية الفرق الذي يصنعه التلميع الدقيق.",
       before: "قبل",
       after: "بعد",
-    },
-    promotions: {
-      eyebrow: "عرض محدود",
-      heading: "العروض الحالية",
-      sub: "أحدث عروضنا على الطلاء السيراميكي والتظليل وحماية المقصورة الداخلية.",
     },
     ctaBanner: {
       heading: "جاهز لسيارة تلفت الأنظار؟",
