@@ -45,7 +45,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 font-body text-sm text-chrome-light/80">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-ceramic" />
-                <span>{businessInfo.address}</span>
+                <span className="min-w-0 break-words">{businessInfo.address}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-ceramic" />

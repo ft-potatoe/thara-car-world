@@ -52,9 +52,9 @@ export default function GoogleReviews({
           <RevealOnScroll key={review.author} delay={i * 0.08}>
             <div className="flex h-full flex-col rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5">
               <div className="mb-3 flex items-start justify-between gap-3">
-                <div>
-                  <p className="font-body text-sm font-semibold text-neutral-900">{review.author}</p>
-                  <p className="font-body text-xs text-neutral-500">{review.meta}</p>
+                <div className="min-w-0">
+                  <p className="font-body text-sm font-semibold text-neutral-900 break-words">{review.author}</p>
+                  <p className="font-body text-xs text-neutral-500 break-words">{review.meta}</p>
                 </div>
                 <Stars count={review.rating} />
               </div>

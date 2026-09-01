@@ -57,19 +57,19 @@ export default function ContactPage() {
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ceramic/10 text-ceramic ring-1 ring-ceramic/20">
                       <detail.icon className="h-5 w-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="font-body text-xs uppercase tracking-widest2 text-chrome-dark">
                         {detail.label}
                       </p>
                       {detail.href ? (
                         <a
                           href={detail.href}
-                          className="font-body text-base text-chrome-light transition-colors hover:text-ceramic"
+                          className="font-body text-base text-chrome-light transition-colors hover:text-ceramic break-words"
                         >
                           {detail.value}
                         </a>
                       ) : (
-                        <p className="font-body text-base text-chrome-light">{detail.value}</p>
+                        <p className="font-body text-base text-chrome-light break-words">{detail.value}</p>
                       )}
                     </div>
                   </li>
